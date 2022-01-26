@@ -1,6 +1,6 @@
 <script>
     import { toDoItems } from "./store.js";
-    import { fade, scale } from "svelte/transition";
+    import { scale } from "svelte/transition";
 
     function removeFromList(i) {
         $toDoItems.splice(i, 1);
@@ -9,7 +9,7 @@
 </script>
 
 {#each $toDoItems as item, index}
-    <div class="toDoItems" in:scale out:fade="{{ dration: 500 }}">
+    <div class="toDoItems" in:scale>
         <input bind:checked={item.status} type="checkbox" id="checked_{index}">
         <label for="checked_{index}">
             <span class:checked={item.status}>{item.text}</span>

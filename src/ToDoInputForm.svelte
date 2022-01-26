@@ -18,5 +18,3 @@
 
 <input bind:value={newItem} bind:this={newItemInputForm} type="text" placeholder="新規タスク">
 <button on:click={() => addToList()}>追加</button>
-
-<h3>{userName}のタスクリスト:</h3>
